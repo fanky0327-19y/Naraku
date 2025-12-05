@@ -195,11 +195,86 @@
 <p>ds = robot.getDevice('ds0')<br/>ds.enable(TIME_STEP)</p>
 <p>while robot.step(TIME_STEP) != -1:<br/>dist = ds.getValue()<br/>if dist &lt; 800:<br/># 避障（簡單反向轉向）<br/>left_motor.setVelocity(-2.0)<br/>right_motor.setVelocity(2.0)<br/>else:<br/>left_motor.setVelocity(3.0)<br/>right_motor.setVelocity(3.0)</p>
 <h3><strong>w14</strong></h3>
+<p></p>
 <p>webots 的模型有沒有辦法用程式方法建立? 有沒有辦法直接從 CAD 套件中轉出 webots 的場景模型？</p>
-<p><strong data-end="26" data-start="5">     </strong><strong> 答案是可以的，但不能直接從 CAD 套件一鍵轉出 .wbt 場景。可行的是透過中介格式輸入 Webots，或寫程式自動產生。</strong></p>
-<h2 data-end="163" data-start="132">1. Webots 是否能用程式方法建立模型？</h2>
+<p><strong data-end="26" data-start="5"></strong><strong><span>✅1. Webots 是否能用程式方法建立模型？</span></strong></p>
 <p data-end="175" data-start="164">可以，有兩種主要方式：</p>
-<h2 data-end="216" data-start="177">(A) 直接產生 .wbt 或 .proto 檔（最常用的方法）</h2>
-<p data-end="295" data-start="217">Webots 的世界檔案 *.wbt 與模型 *.proto 都是 純文字格式（基於 JSON-Like 的 Scene Tree 語法）。</p>
-<p data-end="334" data-start="297">你可以用任何語言寫程式（Python / C++ / JS / 等）產生：</p>
-<strong data-end="163" data-start="136"></strong>
+<p data-end="216" data-start="177"><span><strong><span>#(A)</span> <span>直接產生 <span>.wbt</span> 或 <span>.proto</span> 檔（最常用的方法）</span></strong></span></p>
+<p data-end="295" data-start="217"><strong><span>      </span></strong><span>Webots 的世界檔</span>案 *.wbt 與模型 *.proto 都是 純文字格式（基於 JSON-Like 的 Scene Tree 語法）。</p>
+<p data-end="334" data-start="297">你可以用任何語言寫程式（Python / C++ / JS / 等）產生</p>
+<p data-end="334" data-start="297">下面是程式範例:</p>
+<p data-end="334" data-start="297"><span>Robot </span>{<br/>  <span>translation</span> <span>0 0 0</span><br/>  children [<br/>    Shape {<br/>     <span> geometry</span> Box {<br/>       <span> size</span> <span>1 1 1</span><br/>      }<br/>    }<br/>  ]<br/>}</p>
+<p><strong><span>丨</span></strong>只要輸出成 <span>.wbt</span> 或 <span>.proto</span> 就能直接被 Webots 載入。</p>
+<ul>
+<li data-pm-slice="1 1 []">用途：大量產生物件、程序化地形、建立大型環境、模型版本控制等。<strong></strong></li>
+</ul>
+<p data-pm-slice="1 1 []"><strong>#(B) <span>在 Webots 中用 Supervisor API 動態建立節點</span></strong></p>
+<p><strong><span>     </span><span> Supervisor</span></strong><span> 程式可在 <strong>simulation</strong> <strong>runtime </strong>插入整個 <strong>Node</strong></span>。</p>
+<p>以下是python程式範例:</p>
+<p><span>from</span> controller <span>import </span>Supervisor<br/><span>super </span>= Supervisor()</p>
+<p>root = <span>super</span>.getRoot()<br/>children = root.getField(<span>"children"</span>)</p>
+<p>node_string =<span> """</span><br/><span>DEF Box Shape {</span><br/><span>  geometry Box {</span><br/><span>    size 1 1 1</span><br/><span>  }</span><br/><span>}</span><br/><span>"""</span></p>
+<p>children.importMFNodeFromString(node_string)</p>
+<p data-pm-slice="1 1 []"><strong><span>丨</span>可以動態加入：</strong></p>
+<ul>
+<li><strong>Shape、Solid、Robot</strong></li>
+<li><strong>完整的 Prototype（PROTO）</strong></li>
+</ul>
+<p><strong>但不適合建立非常複雜的場景（效率較差）。</strong></p>
+<p data-pm-slice="1 1 []"><span><strong>✅ 2. 能不能從 CAD 套件直接轉出 Webots 場景？</strong></span></p>
+<p><strong>    </strong> 沒有官方支援「CAD → Webots」的直接匯出器。</p>
+<p>但可以透過以下方式完成：</p>
+<p><strong>(A) CAD → STL/OBJ → Webots（最常用）</strong></p>
+<p>    大部分 CAD（SolidWorks、Fusion360、Creo、Inventor、Rhino…）都能輸出：</p>
+<ul>
+<li>.stl</li>
+<li>.obj</li>
+</ul>
+<p>Webots 可直接把這些模型載入成 Shape。</p>
+<p>    程式範例:</p>
+<p data-pm-slice="1 1 []">Shape {</p>
+<p>  geometry IndexedFaceSet {</p>
+<p>    coord Coordinate { point [...] }</p>
+<p>  }</p>
+<p>}</p>
+<p></p>
+<p><strong>或是使用:</strong></p>
+<p></p>
+<p data-pm-slice="1 1 []"><span>Mesh</span> {</p>
+<p>  <span>url</span> <span>"model.stl"</span></p>
+<p>}</p>
+<p><strong><span>丨</span>適用於<span>靜態物件</span>或<span>機械零件</span>。</strong></p>
+<p data-pm-slice="1 1 []"><strong>(B) CAD → URDF/SDF → Webots</strong></p>
+<p><strong>   </strong> 如果你的模型是機器（多關節）：</p>
+<p><strong><span>1️⃣</span></strong> 用 CAD（例如 SolidWorks + SW2URDF plugin）匯出 URDF</p>
+<p>2️⃣ Webots 可直接 import URDF → 自動轉成 PROTO 機器</p>
+<p><strong><span>丨</span>適用於帶關節、連桿、馬達的模型。</strong></p>
+<p><strong></strong></p>
+<p><strong>(C) CAD → Blender → Webots</strong></p>
+<p><strong>   </strong> Blender 可作為中間站：</p>
+<ul>
+<li>匯入 STEP/IGES</li>
+<li>修復 mesh（decimate、合併、法向調整）</li>
+<li>匯出為 OBJ 或 STL → Webots</li>
+</ul>
+<p><strong><span>丨</span>適用於複雜模型與材質處理。</strong></p>
+<p><strong>------------------------------------------------------------------------------------------------------------</strong></p>
+<p data-pm-slice="1 1 []">📌<strong> Webots 無法直接匯入的內容</strong></p>
+<ul>
+<li>STEP / IGES (需透過其他軟體轉換)</li>
+<li>所有 CAD 參數式模型（需轉 mesh）</li>
+<li>複雜材質、UV 資訊（需要 blender 處理）</li>
+</ul>
+<p data-pm-slice="1 1 []">📝 <strong>結論</strong></p>
+<p><span>✔ </span>Webots 模型可程式化產生</p>
+<p>生成 <span>.wbt</span> 或 <span>.proto</span></p>
+<p>或用 Supervisor API 動態插入節點</p>
+<p><span>✔ </span>CAD 模型可匯入 Webots，但不能直接一鍵轉出</p>
+<p>可行流程：</p>
+<p><strong>CAD → STL / OBJ → Webots</strong></p>
+<p>或</p>
+<p><strong>CAD → URDF → Webots</strong></p>
+<p>或</p>
+<p><strong>CAD → Blender → Webots</strong></p>
+<p><strong>------------------------------------------------------------------------------------------------------------</strong></p>
+<p><strong data-end="163" data-start="136"></strong></p>
