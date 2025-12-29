@@ -2,7 +2,7 @@
         <head>
         <title>cad2025_hw</title>
         <meta charset="utf-8">
-<meta property="head" content="H3">
+<meta property="head" content="H1">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
@@ -131,7 +131,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='CAD2025 41323130 個人網站.html'>CAD2025 41323130 個人網站</a><li class='has-children'><a href='About.html'>About</a><ul class='dropdown'><li class='has-children'><a href='成員名單.html'>成員名單</a><ul class='dropdown'><li><a href='小組分工.html'>小組分工</a></li></ul><li class='has-children'><a href='cad2025進度.html'>cad2025進度</a><ul class='dropdown'><li><a href='w3.html'>w3</a><li><a href='w7.html'>w7</a><li><a href='w10.html'>w10</a><li><a href='w14.html'>w14</a></li></ul><li><a href='Plotter Achievement.html'>Plotter Achievement</a><li><a href='Open_Duck Mini Achievement.html'>Open_Duck Mini Achievement</a></li>
+                     <li><a href='CAD2025 41323130 個人網站.html'>CAD2025 41323130 個人網站</a><li class='has-children'><a href='About.html'>About</a><ul class='dropdown'><li class='has-children'><a href='成員名單.html'>成員名單</a><ul class='dropdown'><li><a href='小組分工.html'>小組分工</a></li></li></ul></ul><li class='has-children'><a href='成果影片.html'>成果影片</a><ul class='dropdown'><li><a href='Plotter Achievement.html'>Plotter Achievement</a><li><a href='Open_Duck Mini Achievement.html'>Open_Duck Mini Achievement</a></li>
                       </ul>
                 </nav>
               </div>
@@ -142,76 +142,50 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">w3 << <a href='w3.html'>Previous</a> <a href='w10.html'>Next</a> >> w10<br /><h1>w7</h1>
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD ======= &gt;&gt;&gt;&gt;&gt;&gt;&gt; 41323129</p>
-<p>======= &gt;&gt;&gt;&gt;&gt;&gt;&gt; b67568dbb009223cc01cd636765c162f73a1dfa9</p>
-<p><span>(2a </span>採<span> Youtube </span>影片簡報<span>): <a href="https://youtu.be/iOLFP90DneY">5-bar Linkage Plotter</a> </span>與<span> <a href="https://mde.tw/cad2025/content/OpenDuck.html">Openduck mini</a> </span>零組件設計繪製完成之後，如何切割零件<span>? </span>為何要切割零件？ 如何利用<span> <a href="https://cyberbotics.com/">Webots</a> </span>進行後續的控制系統設計與動態模擬<span> (Dynamic Simulation)</span>？<span>(<a href="https://mde.tw/cad2025/downloads/plotter_project.7z">plotter_project.7z</a>)</span></p>
-<p>這正是<span> Webots </span>強大之處<span> —— </span>它不僅能「模擬機器人」，還能作為控制系統設計與動態模擬的驗證平台。<span><br/> </span>下面我會一步步教你如何利用<span> Webots </span>進行控制系統設計與動態模擬，從概念<span> → </span>模型<span> → </span>控制<span> → </span>驗證。</p>
-<p>🧠 一、整體流程概觀<span><br/> </span>你可以把<span> Webots </span>當成是一個「虛擬實驗室」：<span><br/> </span>物理模型（<span>Webots </span>模擬）<span> ←→ </span>控制器（你設計的控制系統）</p>
-<p>完整流程如下：<span><br/> 1️</span>⃣ 建立物理模型（機器人或系統）<span><br/> 2️</span>⃣ 分析動態特性（例如質量、摩擦、關節剛度）<span><br/> 3️</span>⃣ 設計控制器（<span>PID</span>、<span>LQR</span>、<span>MPC</span>、神經網路等）<span><br/> 4️</span>⃣ 透過<span> Webots Controller </span>實作控制算法<span><br/> 5️</span>⃣ 模擬、觀察響應、調整控制參數<span><br/> 6️</span>⃣ 驗證穩定性與性能（例如追蹤誤差、超越量、穩態誤差）</p>
-<p>⚙<span>️ </span>二、建立可控制的物理模型<span><br/> </span>在<span> Webots </span>中，每個機械系統或機器人都具備真實物理屬性：</p>
-<p><span><br/> </span>每個零件（<span>body</span>）有質量<span> mass</span>、慣性矩<span> inertia</span></p>
-<p><span><br/> </span>關節（<span>joint</span>）定義了可動範圍、摩擦、彈性</p>
-<p><span><br/> </span>馬達（<span>motor</span>）提供可控制的力矩或速度</p>
-<p><span><br/> </span>感測器（<span>sensor</span>）可量測位置、速度、角度等訊號</p>
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
-<p>=======</p>
-<p></p>
-<p>&gt;&gt;&gt;&gt;&gt;&gt;&gt; b67568dbb009223cc01cd636765c162f73a1dfa9</p>
-<p><span> </span> <span></span></p>
-<p><span></span><br/>💻 三、建立控制器程式（Controller）<br/>Webots 支援多種語言：Python、C、C++、MATLAB。<br/>以 Python 為例，你可以撰寫控制器來實現控制演算法。</p>
-<p><br/>這樣就能實時模擬控制力矩對系統動態的影響，觀察擺桿是否穩定。</p>
-<p>📈 四、進行動態模擬與結果分析<br/>Webots 提供即時數據可視化與資料輸出功能：</p>
-<p><br/>Display 元件：可繪圖</p>
-<p><br/>Supervisor 控制器：能紀錄數據</p>
-<p><br/>Robot.getTime()：取得模擬時間</p>
-<p><br/>save data：輸出 .csv 檔後用 MATLAB / Python 分析</p>
-<p><br/>然後可以在 Python（matplotlib）或 MATLAB 繪出時間響應曲線，分析動態行為（上升時間、超越量、穩態誤差）。</p>
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
-<p>=======</p>
-<p><span></span></p>
-<p>&gt;&gt;&gt;&gt;&gt;&gt;&gt; 41323129 =======</p>
-<p><span>  </span></p>
-<p><span><br/> </span>💻 三、建立控制器程式（<span>Controller</span>）<span><br/> Webots </span>支援多種語言：<span>Python</span>、<span>C</span>、<span>C++</span>、<span>MATLAB</span>。<span><br/> </span>以<span> Python </span>為例，你可以撰寫控制器來實現控制演算法。</p>
-<p>=======</p>
-<p><br/><span></span></p>
-<p>💻 三、建立控制器程式（<span>Controller</span>）<span><br/> Webots </span>支援多種語言：<span>Python</span>、<span>C</span>、<span>C++</span>、<span>MATLAB</span>。<span><br/> </span>以<span> Python </span>為例，你可以撰寫控制器來實現控制演算法。</p>
-<p>&gt;&gt;&gt;&gt;&gt;&gt;&gt; b67568dbb009223cc01cd636765c162f73a1dfa9</p>
-<p><span><br/> </span>這樣就能實時模擬控制力矩對系統動態的影響，觀察擺桿是否穩定。</p>
-<p>📈 四、進行動態模擬與結果分析<span><br/> Webots </span>提供即時數據可視化與資料輸出功能：</p>
-<p><span><br/> Display </span>元件：可繪圖</p>
-<p><span><br/> Supervisor </span>控制器：能紀錄數據</p>
-<p><span><br/> Robot.getTime()</span>：取得模擬時間</p>
-<p><span><br/> save data</span>：輸出<span> .csv </span>檔後用<span> MATLAB / Python </span>分析</p>
-<p><span><br/> </span>然後可以在<span> Python</span>（<span>matplotlib</span>）或<span> MATLAB </span>繪出時間響應曲線，分析動態行為（上升時間、超越量、穩態誤差）。</p>
-<p><span> </span></p>
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
-<p>&gt;&gt;&gt;&gt;&gt;&gt;&gt; 41323129</p>
-<p>======= &gt;&gt;&gt;&gt;&gt;&gt;&gt; b67568dbb009223cc01cd636765c162f73a1dfa9</p>
-<p>🔬 五、與控制理論結合<br/>你可以在 Webots 裡驗證不同的控制器：<br/>PID 控制Webots 內部實作最簡單快速、適合低階控</p>
-<p>制狀態回授（LQR）Python / MATLAB 實作適合多變量系統</p>
-<p>Model Predictive Control (MPC)需 Python + CasADi 或 MATLAB高精度、可處理限制條件</p>
-<p>Adaptive / Neural 控制TensorFlow / PyTorch可模擬 AI 控制行為</p>
-<p>Hybrid SimulationWebots + Simulink完整控制迴路設計與真實模擬整合</p>
-<p>🧩 六、與 MATLAB/Simulink 整合（進階）<br/>如果是做控制系統設計研究（例如自動控制、機器人學課題），可以：</p>
-<p><br/>在 MATLAB Simulink 中建立控制系統模型</p>
-<p><br/>使用 Webots MATLAB API 與模擬環境連線</p>
-<p><br/>由 MATLAB 傳送控制命令給 Webots</p>
-<p><br/>Webots 回傳感測資料給 MATLAB</p>
-<p><br/>即可達到 硬體在環（HIL）/軟體在環（SIL）模擬</p>
-<p><br/>這樣能直接在 Simulink 內進行控制器設計、調參與實驗。</p>
-<p>🧠 七、應用範例<br/>類型模擬對象控制目標飛行器控制四軸飛行器姿態穩定、路徑追蹤機械手臂六軸手臂末端軌跡控制、阻抗控制移動機器人差速 / 全向車避障、SLAM、軌跡跟隨動力學研究雙擺、車輛懸吊系統非線性動態分析</p>
-<p>✅ 總結<br/>階段目標工具模型建立建立物理結構與動態模型Webots Scene Tree感測與致動加入 sensors / motorsWebots API控制設計PID / LQR / MPC / AI 控制Webots Controller / MATLAB動態模擬分析響應、驗證穩定性Webots simulation + data logging優化調參與性能提升MATLAB / Python</p>
+    <div id="tipue_search_content">小組分工 << <a href='小組分工.html'>Previous</a> <a href='Plotter Achievement.html'>Next</a> >> Plotter Achievement<br /><h1>成果影片</h1>
+<div class="x78zum5 xdt5ytf" data-virtualized="false">
+<div class="x9f619 x1n2onr6 x1ja2u2z">
+<div class="">
+<div class="x13dflua x19991ni">
+<div class="x1n2onr6" role="row">
+<div class="x78zum5 xdt5ytf x1n2onr6" data-release-focus-from="CLICK" data-scope="messages_table" role="gridcell" tabindex="-1">
+<div class="html-div xdj266r x14z9mp xat24cr x1lziwak xexx8yu xyri2b x18d9i69 x1c1uobl x78zum5 x1eb86dx">
+<div class="html-div xdj266r x14z9mp xat24cr x1lziwak xexx8yu xyri2b x18d9i69 x1c1uobl xeuugli x1vjfegm">
+<div aria-label="Double tap to like" aria-labelledby="mid.$cAAAEHesSGXmf2eysUWZqKc_072hq double_tappable_id.mid.$cAAAEHesSGXmf2eysUWZqKc_072hq" class="x1qjc9v5 x972fbf x10w94by x1qhh985 x14e42zd x9f619 x78zum5 xdt5ytf x2lah0s xk390pu xdj266r x14z9mp xat24cr x1lziwak xexx8yu xyri2b x18d9i69 x1c1uobl x1n2onr6 xggy1nq x11njtxf" id="double_tappable_id.mid.$cAAAEHesSGXmf2eysUWZqKc_072hq" role="button" tabindex="0">
+<div id="mid.$cAAAEHesSGXmf2eysUWZqKc_072hq">
+<div class="html-div xdj266r x14z9mp xat24cr x1lziwak xexx8yu xyri2b x18d9i69 x1c1uobl x78zum5 xh8yej3" role="presentation">
+<div class="x1cy8zhl x78zum5 xdt5ytf x193iq5w x1n2onr6 x1kxipp6">
+<div class="x78zum5 xh8yej3" role="none">
+<div class="html-div xdj266r x14z9mp xat24cr x1lziwak xexx8yu xyri2b x18d9i69 x1c1uobl x6ikm8r x10wlt62">
+<div class="html-div xdj266r x14z9mp xat24cr x1lziwak x14ctfv x13sv91t x6ikm8r x10wlt62 x1n2onr6 x1vjfegm x1k4qllp x1mzt3pk x13faqbe x1xr0vuk x1jm4cbz x114wg8e xrrpcnn x14rx4xb x13fuv20 x18b5jzi x1q0q8m5 x1t7ytsu x19livfd x1h2krnu x3p3xfz xet2kk3 xaymx6s x1lu5o8o x1ou5ly4 xofb2d2 xm7lytj xpdmqnj x1ykpatu x1g0dm76" role="presentation">
+<div class="html-div xexx8yu xyri2b x18d9i69 x1c1uobl x1gslohp x14z9mp x12nagc x1lziwak x1yc453h x126k92a x18lvrbx" dir="auto"></div>
+<div class="html-div xexx8yu xyri2b x18d9i69 x1c1uobl x1gslohp x14z9mp x12nagc x1lziwak x1yc453h x126k92a x18lvrbx" dir="auto"><strong>五連桿機構影片</strong>: <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/-9xwP1cuZkE?si=5gsv8VUO8pL7E0ut" title="YouTube video player" width="560"></iframe></div>
+<div class="html-div xexx8yu xyri2b x18d9i69 x1c1uobl x1gslohp x14z9mp x12nagc x1lziwak x1yc453h x126k92a x18lvrbx" dir="auto"></div>
+<div class="html-div xexx8yu xyri2b x18d9i69 x1c1uobl x1gslohp x14z9mp x12nagc x1lziwak x1yc453h x126k92a x18lvrbx" dir="auto"></div>
+<div class="html-div xexx8yu xyri2b x18d9i69 x1c1uobl x1gslohp x14z9mp x12nagc x1lziwak x1yc453h x126k92a x18lvrbx" dir="auto"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 <p><span> </span><a href="https://youtu.be/iOLFP90DneY">5-bar Linkage Plotter</a> 零組件切割 youtube影片:</p>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/lNDeVQvtSRQ?si=Ao0-ZLweWpwb6hXz" title="YouTube video player" width="560"></iframe></p>
 <p></p>
-<p></p>
-<p></p>
 <p><a href="https://mde.tw/cad2025/content/OpenDuck.html">Openduck mini</a> 零組件切割 youtube影片:</p>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/gDog0ccshic?si=pXHmIEHqnOCx-umF" title="YouTube video player" width="560"></iframe></p>
-<br />w3 << <a href='w3.html'>Previous</a> <a href='w10.html'>Next</a> >> w10</div>
+<p></p>
+<p></p>
+<br />小組分工 << <a href='小組分工.html'>Previous</a> <a href='Plotter Achievement.html'>Next</a> >> Plotter Achievement</div>
         
     <!-- footer -->
       <div class="container">
