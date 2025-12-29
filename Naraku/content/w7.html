@@ -1,0 +1,264 @@
+<!DOCTYPE html><html>
+        <head>
+        <title>cad2025_hw</title>
+        <meta charset="utf-8">
+<meta property="head" content="H3">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/magnific-popup.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/jquery-ui.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/flaticon/font/flaticon.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/aos.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/style.css">
+        <link rel="shortcut icon" href="./../cmsimde/static/favicons.png">
+        
+        <style type='text/css'>
+            .site-section {
+            background-color: #FFFF;
+            padding: 40px 40px;
+            }
+            body > div > div.dropdown.open {
+                display: block;
+            }
+        </style>
+    
+        <!-- <script src="./../cmsimde/static/jquery.js"></script> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/normalize.min.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
+        <script src="tipuesearch_content.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
+        <!-- for Wink3 客製化關閉 -->
+        <!--
+        <link rel="stylesheet" type="text/css" href="./../cmsimde/static/winkPlayer.css" />
+        <script type="text/javascript" src="./../cmsimde/static/winkPlayer.js"></script>
+        -->
+        <script>
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        </script>
+        
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushBash.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDiff.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPowerShell.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushMojo.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushWbt.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushRust.js"></script>
+<link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+<!-- 暫時不用
+<script src="./../cmsimde/static/fengari-web.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
+
+</head>
+<body>
+<div class='container'><nav>
+        
+    <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+            <header class="site-navbar py-4 bg-white" role="banner">
+              <div class="container">
+                <div class="row align-items-center">
+                <h1>cad2025_hw</h1>
+                <div class="pl-4">
+                    <form>
+                    <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
+                    </form>
+                </div>
+                  <!-- <div class="col-11 col-xl-2">
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">cad2025_hw</a></h1> 
+                  </div>
+                  -->
+                  <div class="col-12 col-md-10 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+    <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
+                        <li class="active has-children"><a href="index.html">Home</a>
+                        <ul class="dropdown">
+                            <li><a href="sitemap.html">SMap</a></li>
+                            <li><a href="./../reveal/index.html">reveal</a></li>
+                            <li><a href="./../blog/index.html">blog</a></li>
+                        </ul>
+                      </li>
+                     <li><a href='About.html'>About</a><li class='has-children'><a href='CAD2025.html'>CAD2025</a><ul class='dropdown'><li><a href='成員名單.html'>成員名單</a><li><a href='小組分工.html'>小組分工</a><li><a href='組員1.html'>組員1</a><li><a href='組員2 : 41323108 何丞凱.html'>組員2 : 41323108 何丞凱</a><li><a href='組員3 : 41323130 曹人方.html'>組員3 : 41323130 曹人方</a><li><a href='組員4.html'>組員4</a><li><a href='組員5.html'>組員5</a><li><a href='組員6 : 41323129 張方碩.html'>組員6 : 41323129 張方碩</a><li class='has-children'><a href='cad2025進度.html'>cad2025進度</a><ul class='dropdown'><li><a href='w3.html'>w3</a><li><a href='w7.html'>w7</a><li><a href='w10.html'>w10</a><li><a href='w14.html'>w14</a></li></ul><li><a href='Plotter Achievement.html'>Plotter Achievement</a><li><a href='Open_Duck Mini Achievement.html'>Open_Duck Mini Achievement</a></li>
+                      </ul>
+                </nav>
+              </div>
+              <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+              </div>
+
+            </div>
+          </div>
+          
+        </header>
+    <div id="tipue_search_content">w3 << <a href='w3.html'>Previous</a> <a href='w10.html'>Next</a> >> w10<br /><h1>w7</h1>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD ======= &gt;&gt;&gt;&gt;&gt;&gt;&gt; 41323129</p>
+<p>======= &gt;&gt;&gt;&gt;&gt;&gt;&gt; b67568dbb009223cc01cd636765c162f73a1dfa9</p>
+<p><span>(2a </span>採<span> Youtube </span>影片簡報<span>): <a href="https://youtu.be/iOLFP90DneY">5-bar Linkage Plotter</a> </span>與<span> <a href="https://mde.tw/cad2025/content/OpenDuck.html">Openduck mini</a> </span>零組件設計繪製完成之後，如何切割零件<span>? </span>為何要切割零件？ 如何利用<span> <a href="https://cyberbotics.com/">Webots</a> </span>進行後續的控制系統設計與動態模擬<span> (Dynamic Simulation)</span>？<span>(<a href="https://mde.tw/cad2025/downloads/plotter_project.7z">plotter_project.7z</a>)</span></p>
+<p>這正是<span> Webots </span>強大之處<span> —— </span>它不僅能「模擬機器人」，還能作為控制系統設計與動態模擬的驗證平台。<span><br/> </span>下面我會一步步教你如何利用<span> Webots </span>進行控制系統設計與動態模擬，從概念<span> → </span>模型<span> → </span>控制<span> → </span>驗證。</p>
+<p>🧠 一、整體流程概觀<span><br/> </span>你可以把<span> Webots </span>當成是一個「虛擬實驗室」：<span><br/> </span>物理模型（<span>Webots </span>模擬）<span> ←→ </span>控制器（你設計的控制系統）</p>
+<p>完整流程如下：<span><br/> 1️</span>⃣ 建立物理模型（機器人或系統）<span><br/> 2️</span>⃣ 分析動態特性（例如質量、摩擦、關節剛度）<span><br/> 3️</span>⃣ 設計控制器（<span>PID</span>、<span>LQR</span>、<span>MPC</span>、神經網路等）<span><br/> 4️</span>⃣ 透過<span> Webots Controller </span>實作控制算法<span><br/> 5️</span>⃣ 模擬、觀察響應、調整控制參數<span><br/> 6️</span>⃣ 驗證穩定性與性能（例如追蹤誤差、超越量、穩態誤差）</p>
+<p>⚙<span>️ </span>二、建立可控制的物理模型<span><br/> </span>在<span> Webots </span>中，每個機械系統或機器人都具備真實物理屬性：</p>
+<p><span><br/> </span>每個零件（<span>body</span>）有質量<span> mass</span>、慣性矩<span> inertia</span></p>
+<p><span><br/> </span>關節（<span>joint</span>）定義了可動範圍、摩擦、彈性</p>
+<p><span><br/> </span>馬達（<span>motor</span>）提供可控制的力矩或速度</p>
+<p><span><br/> </span>感測器（<span>sensor</span>）可量測位置、速度、角度等訊號</p>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
+<p>=======</p>
+<p></p>
+<p>&gt;&gt;&gt;&gt;&gt;&gt;&gt; b67568dbb009223cc01cd636765c162f73a1dfa9</p>
+<p><span> </span> <span></span></p>
+<p><span></span><br/>💻 三、建立控制器程式（Controller）<br/>Webots 支援多種語言：Python、C、C++、MATLAB。<br/>以 Python 為例，你可以撰寫控制器來實現控制演算法。</p>
+<p><br/>這樣就能實時模擬控制力矩對系統動態的影響，觀察擺桿是否穩定。</p>
+<p>📈 四、進行動態模擬與結果分析<br/>Webots 提供即時數據可視化與資料輸出功能：</p>
+<p><br/>Display 元件：可繪圖</p>
+<p><br/>Supervisor 控制器：能紀錄數據</p>
+<p><br/>Robot.getTime()：取得模擬時間</p>
+<p><br/>save data：輸出 .csv 檔後用 MATLAB / Python 分析</p>
+<p><br/>然後可以在 Python（matplotlib）或 MATLAB 繪出時間響應曲線，分析動態行為（上升時間、超越量、穩態誤差）。</p>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
+<p>=======</p>
+<p><span></span></p>
+<p>&gt;&gt;&gt;&gt;&gt;&gt;&gt; 41323129 =======</p>
+<p><span>  </span></p>
+<p><span><br/> </span>💻 三、建立控制器程式（<span>Controller</span>）<span><br/> Webots </span>支援多種語言：<span>Python</span>、<span>C</span>、<span>C++</span>、<span>MATLAB</span>。<span><br/> </span>以<span> Python </span>為例，你可以撰寫控制器來實現控制演算法。</p>
+<p>=======</p>
+<p><br/><span></span></p>
+<p>💻 三、建立控制器程式（<span>Controller</span>）<span><br/> Webots </span>支援多種語言：<span>Python</span>、<span>C</span>、<span>C++</span>、<span>MATLAB</span>。<span><br/> </span>以<span> Python </span>為例，你可以撰寫控制器來實現控制演算法。</p>
+<p>&gt;&gt;&gt;&gt;&gt;&gt;&gt; b67568dbb009223cc01cd636765c162f73a1dfa9</p>
+<p><span><br/> </span>這樣就能實時模擬控制力矩對系統動態的影響，觀察擺桿是否穩定。</p>
+<p>📈 四、進行動態模擬與結果分析<span><br/> Webots </span>提供即時數據可視化與資料輸出功能：</p>
+<p><span><br/> Display </span>元件：可繪圖</p>
+<p><span><br/> Supervisor </span>控制器：能紀錄數據</p>
+<p><span><br/> Robot.getTime()</span>：取得模擬時間</p>
+<p><span><br/> save data</span>：輸出<span> .csv </span>檔後用<span> MATLAB / Python </span>分析</p>
+<p><span><br/> </span>然後可以在<span> Python</span>（<span>matplotlib</span>）或<span> MATLAB </span>繪出時間響應曲線，分析動態行為（上升時間、超越量、穩態誤差）。</p>
+<p><span> </span></p>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
+<p>&gt;&gt;&gt;&gt;&gt;&gt;&gt; 41323129</p>
+<p>======= &gt;&gt;&gt;&gt;&gt;&gt;&gt; b67568dbb009223cc01cd636765c162f73a1dfa9</p>
+<p>🔬 五、與控制理論結合<br/>你可以在 Webots 裡驗證不同的控制器：<br/>PID 控制Webots 內部實作最簡單快速、適合低階控</p>
+<p>制狀態回授（LQR）Python / MATLAB 實作適合多變量系統</p>
+<p>Model Predictive Control (MPC)需 Python + CasADi 或 MATLAB高精度、可處理限制條件</p>
+<p>Adaptive / Neural 控制TensorFlow / PyTorch可模擬 AI 控制行為</p>
+<p>Hybrid SimulationWebots + Simulink完整控制迴路設計與真實模擬整合</p>
+<p>🧩 六、與 MATLAB/Simulink 整合（進階）<br/>如果是做控制系統設計研究（例如自動控制、機器人學課題），可以：</p>
+<p><br/>在 MATLAB Simulink 中建立控制系統模型</p>
+<p><br/>使用 Webots MATLAB API 與模擬環境連線</p>
+<p><br/>由 MATLAB 傳送控制命令給 Webots</p>
+<p><br/>Webots 回傳感測資料給 MATLAB</p>
+<p><br/>即可達到 硬體在環（HIL）/軟體在環（SIL）模擬</p>
+<p><br/>這樣能直接在 Simulink 內進行控制器設計、調參與實驗。</p>
+<p>🧠 七、應用範例<br/>類型模擬對象控制目標飛行器控制四軸飛行器姿態穩定、路徑追蹤機械手臂六軸手臂末端軌跡控制、阻抗控制移動機器人差速 / 全向車避障、SLAM、軌跡跟隨動力學研究雙擺、車輛懸吊系統非線性動態分析</p>
+<p>✅ 總結<br/>階段目標工具模型建立建立物理結構與動態模型Webots Scene Tree感測與致動加入 sensors / motorsWebots API控制設計PID / LQR / MPC / AI 控制Webots Controller / MATLAB動態模擬分析響應、驗證穩定性Webots simulation + data logging優化調參與性能提升MATLAB / Python</p>
+<p><span> </span><a href="https://youtu.be/iOLFP90DneY">5-bar Linkage Plotter</a> 零組件切割 youtube影片:</p>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/lNDeVQvtSRQ?si=Ao0-ZLweWpwb6hXz" title="YouTube video player" width="560"></iframe></p>
+<p></p>
+<p></p>
+<p></p>
+<p><a href="https://mde.tw/cad2025/content/OpenDuck.html">Openduck mini</a> 零組件切割 youtube影片:</p>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/gDog0ccshic?si=pXHmIEHqnOCx-umF" title="YouTube video player" width="560"></iframe></p>
+<br />w3 << <a href='w3.html'>Previous</a> <a href='w10.html'>Next</a> >> w10</div>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
+            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../cmsimde/static/chimper/js/main.js"></script>
+        
+<!-- 啟用 LaTeX equations 編輯 -->
+  <!-- <script>
+  MathJax = {
+    tex: {inlineMath: [['$', '$'], ['\(', '\)']]}
+  };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>-->
+    </body></html>
+        
